@@ -1,0 +1,87 @@
+/*
+Theme Name: Jun Demo Theme
+Theme URI: https://wpshowcases.com/jun-demo-theme
+Author: Jun Cai
+Author URI: https://wpshowcases.com/
+Description: This theme is a WordPress starter theme that allow you to build your website from scratch.
+Requires at least: 6.1
+Tested up to: 6.1
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: wpshowcases
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, accessibility-ready, blog, portfolio, news
+*/
+
+.wp-block-search__input {
+    height: 40px;
+    padding-left: 20px;
+}
+
+/*----------------- Custom Header Styles -----------------*/
+
+.custom-header {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "logo cart"
+    "search search";
+    gap: 1rem;
+}
+
+.custom-header__logo {
+    grid-area: logo;
+    
+}
+
+.custom-header__search {
+    grid-area: search;
+    
+}
+
+.custom-header__cart {
+    grid-area: cart;
+    display: flex;
+    justify-content: right;
+}
+
+/*---------- Main manu selected item -----------*/
+.current-menu-item a {
+    font-weight: bolder;
+}
+
+.wc-block-grid__product-onsale{
+    display:none;
+}
+
+.wc--custom--all-products {
+    margin-top: 1rem !important;
+}
+
+.wc-block-product-new {
+    margin-top: 1rem !important;
+}
+
+.wp-block-product-on-sale {
+    margin-top: 1rem !important;
+}
+
+/*----------- WooCommence Mod --------------*/
+
+
+@media only screen and (min-width: 600px) {
+    .custom-header {
+        grid-template-columns: 1fr 1.3fr 1fr;
+        grid-template-areas: 
+        "logo search cart";
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .custom-header__search {
+        grid-area: search;
+        padding-bottom: 1rem;
+    }
+}
